@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#1e2f55"/>
+      <stop offset="55%" stop-color="#0b1424"/>
+      <stop offset="100%" stop-color="#060a12"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4d6bfe" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#4d6bfe" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0.15" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#93b0ff"/>
+      <stop offset="42%" stop-color="#5b7cff"/>
+      <stop offset="100%" stop-color="#324ed6"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7faff"/>
+      <stop offset="100%" stop-color="#c6d7ff"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4f6df7"/>
+      <stop offset="100%" stop-color="#2c44bb"/>
+    </linearGradient>
+    <path id="bodyPath" d="M 256 196
+      C 338 196 402 241 406 316
+      C 410 387 352 437 260 437
+      C 166 437 102 387 102 313
+      C 102 240 170 196 256 196 Z"/>
+    <clipPath id="bodyClip"><use href="#bodyPath"/></clipPath>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="272" r="212" fill="url(#glow)"/>
+
+  <!-- tail -->
+  <path d="M 386 290
+    C 410 263 440 247 472 246
+    C 475 254 470 266 464 280
+    C 456 296 450 305 447 311
+    C 451 319 458 332 464 348
+    C 469 361 473 368 471 373
+    C 439 370 410 352 389 332 Z"
+    fill="url(#tail)"/>
+
+  <!-- body -->
+  <use href="#bodyPath" fill="url(#body)"/>
+
+  <!-- belly -->
+  <g clip-path="url(#bodyClip)">
+    <ellipse cx="256" cy="390" rx="112" ry="62" fill="url(#belly)"/>
+    <ellipse cx="256" cy="306" rx="150" ry="120" fill="none"/>
+  </g>
+
+  <!-- eyes -->
+  <g>
+    <ellipse cx="208" cy="286" rx="22" ry="27" fill="#0a1120"/>
+    <circle cx="200" cy="276" r="8" fill="#ffffff"/>
+    <circle cx="215" cy="297" r="3.2" fill="#ffffff" opacity="0.75"/>
+    <ellipse cx="304" cy="286" rx="22" ry="27" fill="#0a1120"/>
+    <circle cx="296" cy="276" r="8" fill="#ffffff"/>
+    <circle cx="311" cy="297" r="3.2" fill="#ffffff" opacity="0.75"/>
+  </g>
+
+  <!-- blush -->
+  <ellipse cx="170" cy="326" rx="22" ry="12" fill="#ff7aa2" opacity="0.38"/>
+  <ellipse cx="342" cy="326" rx="22" ry="12" fill="#ff7aa2" opacity="0.38"/>
+
+  <!-- mouth -->
+  <path d="M 238 343 Q 256 359 274 343" fill="none" stroke="#0a1120" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- spout -->
+  <g fill="#a9c4ff">
+    <circle cx="251" cy="151" r="13"/>
+    <circle cx="224" cy="173" r="8"/>
+    <circle cx="277" cy="167" r="9"/>
+    <circle cx="241" cy="124" r="5" opacity="0.9"/>
+    <circle cx="267" cy="139" r="4" opacity="0.9"/>
+  </g>
+
+  <!-- bow -->
+  <g transform="translate(336 216) rotate(14) scale(0.95)">
+    <path d="M 0 0 C -16 -17 -40 -19 -47 -5 C -40 10 -16 12 0 0 Z" fill="#ff7aa2"/>
+    <path d="M 0 0 C 16 -17 40 -19 47 -5 C 40 10 16 12 0 0 Z" fill="#ff9ab8"/>
+    <circle cx="0" cy="0" r="7.5" fill="#ff5c8a"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#bcd2ff" opacity="0.7">
+    <path d="M 122 118 l 3 10 10 3 -10 3 -3 10 -3 -10 -10 -3 10 -3 z"/>
+    <path d="M 408 132 l 2 7 7 2 -7 2 -2 7 -2 -7 -7 -2 7 -2 z"/>
+    <path d="M 402 402 l 2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z"/>
+  </g>
+</svg>
